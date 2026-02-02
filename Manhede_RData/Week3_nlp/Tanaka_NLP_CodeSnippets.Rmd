@@ -1,0 +1,109 @@
+---
+title: "NLP Code Snippet Cheat Sheet"
+author: "Tanaka"
+date: "`r format(Sys.Date(), '%B %Y')`"
+output:
+  html_document:
+    code_folding: show
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    css: !expr here::here("/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/styles_templates/jr_19.css")
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(fig.width=8, fig.height=5, fig.align = 'left', fig.path='Figs/', cache.path='Cache/', eval=T, echo=T, tidy=TRUE,  cache=F, message=F, warning=F, stringsAsFactors=F, yaml.eval.expr = TRUE)  
+
+library(xfun)
+pkg_attach("tidyverse", "here", "kableExtra", "RCurl", "psych", "knitr", "RColorBrewer", 'dplyr', 'gutenbergr', 'janeaustenr', install=T)
+
+jamie.theme <- theme_bw() + theme(axis.line = element_line(colour = "black"), panel.grid.minor = element_blank(), panel.grid.major = element_blank(), panel.border = element_blank(), panel.background = element_blank(), legend.title= element_blank())  #custom theme ggplot2
+
+
+print.me <- function(x, ...) {
+if (nrow(x) > 200){
+   len <- 200 
+    } else {
+       len <- (nrow(x))
+}
+   x[1:len,] %>%
+   kbl(digits=2, align= 'l', booktabs=T) %>%
+   kable_styling(fixed_thead = T) %>%
+   kable_paper("striped", full_width = T, html_font = "Helvetica", font_size = 12) %>%
+   row_spec(0, color = "white", background = "#5b705f", font_size = 12) %>%
+   scroll_box(width = "700px", height = "500px") %>%
+   asis_output()
+}
+
+registerS3method("knit_print", "data.frame", print.me)
+#to_R <- read.csv(here("data", "MyRaw.txt")) ---- using 'here' to read in data
+```
+
+# Cheatsheet Code Snippets
+
+Below are code snippets that will be continuously updated!
+
+
+## Importing files from online repositories!
+Are you tired of continuously updating file pathways to match your local file repository? Look no further
+```{r}
+#Here, I am loading in unabomber texts from an online repository!
+test1 <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt'))
+
+```
+
+
+## Make a function
+You can make a function to build unique functions
+```{r}
+#Here, you can make your own function! The input of the function is a vector which the coder will insert any variable and will get the result due to the function containing select commands
+myfunc <- function(x,y) { 
+
+Z <- x+y 
+
+return(Z) 
+
+} 
+
+#You can test myfunc here by simply inputting variables requested by the function
+
+myfunc(3,2)
+
+```
+
+
+## Gsub (global substitution)
+gsub is a great function that can remove and replace things you want and don't need  
+```{r}
+#Just loading in the some text
+badtoken <- "Mary had a little lamb"
+# The [[:punct:]] observes all punctuation in the token, the " " is to replaces the punctuation, and the "badtoken" is the variable or in other words the content or text you are looking to start cleaning
+gonestring <- gsub("[[:punct:]]","",badtoken) 
+
+```
+
+
+## lowercase
+if you want lowercase text, use this function!
+```{r}
+#Loading in a file to mess
+badtoken <- "Mary Had A Little Lamb"
+
+#Just a simple code to make the text lowercase!
+x <- tolower(badtoken)
+
+print(x)
+```
+
+
+## Splitting strings
+Another easy code snippet worth mentioning since we are in the realm of NLP. This code is good when you want to tokenize the text you have.
+```{r}
+#Here is a few lines of code that we can to
+gonestring <- "Mary had a little lamb"
+
+splitstring = str_split(gonestring, " ")
+
+```
+
+# More code snippets to come...

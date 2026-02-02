@@ -1,0 +1,63 @@
+---
+title: "Tanaka_ReadingCleaningGenie"
+output: html_document
+date: "2026-01-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Cleaning Genie Instructions
+
+1. Make the words lowercase!
+2. Do you want to get rid of anything? Numbers or ordinal numbers (Yes)
+3. Split white space 
+4. Remove punctuation; consider contractions before you remove the words, because they need to be expanded first
+5. You can do if or if/else statements for the function
+6. Include splitstring function 
+7. Creative reign in my cleaning genie
+```{r}
+
+#We are loading the text into R! Here we have the unabomber text which needs to be thoroughly cleaned
+badtoken <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt'))
+
+#I am providing the option to view certain texts from the unabomber texts; badtoken.s means we have shortened the the bad token text to view only a set amount of texts 
+badtoken.s <- cat(badtoken[1:60], sep = "\n")
+
+#Now, we start building the genie from the bottle! I will be annotating the the function heavily to become one with the function!
+
+#The function will only take the input of the uncleaned (bad) token. The default is to view the token from 1-60, but the code for it can be blocked off so that all the text can be used
+springcleaning <- function(badtoken.s) { 
+
+# We are making all the stuff lower case! Have to start somewhere
+  x <- tolower(badtoken.s)
+
+#Next, we need to input replacement words; replace the slang!
+  
+  
+
+#
+  
+# (N) Here we are removing punctuation from the token
+  gonestring <- gsub("[[:punct:]]","",badtoken) 
+
+#We are almost at the finish line, here we are splitting the string by spaces to create words
+  splitstring = str_split(gonestring, " ")
+
+#NOTE TO SELF: DO NOT INCLUDE this code since it will create a data frame that will crash your already slow laptop
+  #df_lambchops <- data.frame(x = splitstring)
+  #colnames(df_lambchops)[1] <- "Words"
+  
+  return(df_lambchops) 
+
+} 
+
+
+springcleaning(badtoken.s)
+
+
+
+```
+

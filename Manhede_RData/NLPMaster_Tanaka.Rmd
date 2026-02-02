@@ -1,0 +1,209 @@
+---
+title: "Natural Language Processing Course"
+author: "Tanaka Manhede"
+date: "`r format(Sys.Date(), '%B %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    css: !expr here::here("/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/styles_templates/jr_19.css")
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(fig.width=8, fig.height=5, fig.align = 'left', fig.path='Figs/', cache.path='Cache/', eval=T, echo=T, tidy=TRUE,  cache=F, message=F, warning=F, stringsAsFactors=F, yaml.eval.expr = TRUE)  
+
+library(xfun)
+pkg_attach("tidyverse", "here", "kableExtra", "RCurl", "psych", "knitr", "RColorBrewer", 'dplyr', install=T)
+
+jamie.theme <- theme_bw() + theme(axis.line = element_line(colour = "black"), panel.grid.minor = element_blank(), panel.grid.major = element_blank(), panel.border = element_blank(), panel.background = element_blank(), legend.title= element_blank())  #custom theme ggplot2
+
+
+print.me <- function(x, ...) {
+if (nrow(x) > 200){
+   len <- 200 
+    } else {
+       len <- (nrow(x))
+}
+   x[1:len,] %>%
+   kbl(digits=2, align= 'l', booktabs=T) %>%
+   kable_styling(fixed_thead = T) %>%
+   kable_paper("striped", full_width = T, html_font = "Helvetica", font_size = 12) %>%
+   row_spec(0, color = "white", background = "#5b705f", font_size = 12) %>%
+   scroll_box(width = "700px", height = "500px") %>%
+   asis_output()
+}
+
+registerS3method("knit_print", "data.frame", print.me)
+#to_R <- read.csv(here("data", "MyRaw.txt")) ---- using 'here' to read in data
+
+
+# dat <-
+# need two columns assigning each word with the Nlett
+#
+#
+#
+#install.packages("formatR")
+library(formatR)
+```
+
+#                              RENOVATION UNDERWAY
+
+More content to come...
+
+# Note of the Day:
+
+Sorry for the delay. OneDrive is the root of all evil. GitHub supremacy
+
+# Coder's File
+
+## Coder's Note
+Welcome to my hub! Here, I will be periodically documenting my coding journey. Some code you will see will make you squint your eyes in confusion. Don't fret! Look the other way and recognize that the code works, equivalent to that of duct tape. Over time, I will upgrade from duct tape to b7000. The metaphor may not make sense but all this just to say enjoy the process of my code writing! Throughout the journey, there will be fun tidbits sprinkled throughout the page to distract from the code, don't get side tracked!  
+
+## Code Snippets
+
+
+# Homework
+
+Here are all the homeworks for this class!
+
+## Homework One
+
+For my first homework I am going to produce is a string called "Mary had a little lamb" in one code block. Then I'm going to split the string to one word per row. Then I'm going to add a variable called Nletters that counts the letters in each word. The other part of your homework is to style your css to your personal needs.
+
+ 
+So, step one is to produce the string "Mary had a Little Lamb"
+
+```{r}
+my_string <- "Mary had a little lamb"
+
+print(my_string)
+
+```
+
+That seemed easy...
+
+Now, we are going to take the string "Mary had a little lamb" and put it into a data frame that counts the number of letters/characters in each word. The challenge is being able to create a table that I can simply change the string and it will automatically update; so a bit of elbow grease was used, but nevertheless here is the code:
+
+```{r}
+
+#This splits the sentence by word, given that there is a space inserted between each word
+words = str_split(my_string, " ")
+
+#This is a data frame that serves to list out the words in the sentence and the number of letters or characters in each word. It has been formated this way so that a different sentence can be inserted and formatted as a data frame
+df.lambchops <- data.frame(x = words, y = NA)
+
+#I am renaming the column with more appropriate names. (haha lamb chops)
+colnames(df.lambchops)[1] <- "Words"
+colnames(df.lambchops)[2] <- "N_letters"
+
+#For the N_letters column, here we are counting the number of characters or letters in each word that has its own row
+df.lambchops$N_letters <- nchar(df.lambchops$Words)
+
+print(df.lambchops)
+
+```
+
+All in a good day's work! 
+
+
+
+## Homework Two
+
+Well it looks like we have another assignment, this one took a little more elbow grease than the last time...
+Don't mind the mess, but if it works it works (cue chuckle)
+
+First step is loading in the file needed to be cleaned!
+
+1) Read 'sticks_messy.txt' into R
+
+```{r}
+#Here, I am loading in the messy_txt to clean
+messy_txt <- readLines('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week2_nlp/data/sticks_messy.txt')
+  
+```
+
+
+I combined the next steps into a function called springcleaning!
+
+2) Create a cleaning function with at least three chained procedures
+3) Clean the text file using your homemade cleaning function
+4) Split the text file into a one-word-per row format
+
+```{r}
+
+springcleaning <- function() { 
+
+#This line removes punctuations and replaces it with no space to push the word token together or removes an extra space
+  gonestring.punct <- gsub("[[:punct:]]","",messy_txt) 
+#Removes numbers and replaces it with no space to push the word token togetheror removes an extra space
+  gonestring.num <- gsub("[[:digit:]]","",gonestring.punct)
+#Removes extra abnormal spaces and replaces it with one space to separate word tokens
+  gonestring.sp <- gsub("[[:space:]]"," ", gonestring.num) 
+#Splits the words by space
+  splitstring = strsplit(gonestring.num, " ")
+#Unlisting the texts in the file
+  splitstring.unlist <- unlist(splitstring)
+#This makes a data frame with a word per row
+  df_lambchops <- data.frame(x = splitstring.unlist)
+#A new data fram is made and excludes cells that are empty
+  df_lamb <- df_lambchops %>% filter(x != "")
+
+#Renaming the column for organizational purposes to "Words" instead of "x"
+  colnames(df_lamb)[1] <- "Words"
+#Returning a new data frame!
+  return(df_lamb) 
+
+} 
+
+springcleaning()
+
+```
+
+
+Now that the hard part is out of the way, it's all easy from here.
+
+5) Tell me how many words are in the story
+
+```{r}
+#I am counting the number of rows since it represents the number of words in the text
+nrow(springcleaning())
+
+```
+
+
+Oh, another function; well, this one is not that bad.
+
+6) Compute type token ratio
+
+```{r}
+
+ttr <- function() {
+#Counting how many words are in the function to find the total word token
+  tokens <- nrow(springcleaning())
+#Counting the number of unique word tokens in the data frame
+  type <- length(unique(springcleaning()$Words))
+#Need to make the values of each variable numeric so that I can perform the operation;It will not work on characters
+  as.numeric(tokens)
+  as.numeric(type)
+#Creating a formula to take the number of unique word tokens and divide it by the total number of tokens in the text
+  TTR <- type/tokens
+  
+  return(TTR)
+}
+
+ttr()
+
+```
+
+All done! 
+
+Keep an eye out for Homework 3!
+
+
+
+
+
+## Homework Three
+
+
