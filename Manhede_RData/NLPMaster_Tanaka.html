@@ -1336,7 +1336,7 @@ margin-left: -15px;
 padding-left: 0px;
 }
 
-h1.title {color: black;
+h1.title {color: white;
 font-size: 16pt;
 background-color: #F0B6E3;
 padding-top: 1em;
@@ -1618,19 +1618,18 @@ border-radius: 0px;
 </div>
 
 
+<p><br></p>
 <div id="renovation-underway" class="section level1">
 <h1>RENOVATION UNDERWAY</h1>
 <p>More content to come…</p>
 </div>
 <div id="note-of-the-day" class="section level1">
 <h1>Note of the Day:</h1>
-<p>Sorry for the delay. OneDrive is the root of all evil. GitHub
-supremacy</p>
+<p>What are the chances in which lunch and funeral occur in the same
+30-word window? The chances are low but never zero…</p>
 </div>
-<div id="coders-file" class="section level1">
-<h1>Coder’s File</h1>
-<div id="coders-note" class="section level2">
-<h2>Coder’s Note</h2>
+<div id="coders-note" class="section level1">
+<h1>Coder’s Note</h1>
 <p>Welcome to my hub! Here, I will be periodically documenting my coding
 journey. Some code you will see will make you squint your eyes in
 confusion. Don’t fret! Look the other way and recognize that the code
@@ -1640,26 +1639,31 @@ say enjoy the process of my code writing! Throughout the journey, there
 will be fun tidbits sprinkled throughout the page to distract from the
 code, don’t get side tracked!</p>
 </div>
-<div id="code-snippets" class="section level2">
-<h2>Code Snippets</h2>
+<div id="code-snippets" class="section level1">
+<h1>Code Snippets</h1>
+<p>Here is a bank of code snippets to help you (more so me) with your
+coding!</p>
+<div id="code-snippet-1" class="section level2">
+<h2>Code Snippet 1</h2>
 </div>
 </div>
 <div id="homework" class="section level1">
 <h1>Homework</h1>
-<p>Here are all the homeworks for this class!</p>
-<div id="homework-one" class="section level2">
-<h2>Homework One</h2>
-<p>For my first homework I am going to produce is a string called “Mary
-had a little lamb” in one code block. Then I’m going to split the string
-to one word per row. Then I’m going to add a variable called Nletters
-that counts the letters in each word. The other part of your homework is
-to style your css to your personal needs.</p>
+<p>This is just a simple repository of the homework assignments <br></p>
+<div id="homework-1-worse" class="section level2">
+<h2>Homework 1: Worse</h2>
+<p><br> For my first homework I am going to produce is a string called
+“Mary had a little lamb” in one code block. Then I’m going to split the
+string to one word per row. Then I’m going to add a variable called
+Nletters that counts the letters in each word. The other part of your
+homework is to style your css to your personal needs.</p>
+<p><br></p>
 <p>So, step one is to produce the string “Mary had a Little Lamb”</p>
 <pre class="r"><code>my_string &lt;- &quot;Mary had a little lamb&quot;
 
 print(my_string)</code></pre>
 <pre><code>## [1] &quot;Mary had a little lamb&quot;</code></pre>
-<p>That seemed easy…</p>
+<p>That seemed easy… <br></p>
 <p>Now, we are going to take the string “Mary had a little lamb” and put
 it into a data frame that counts the number of letters/characters in
 each word. The challenge is being able to create a table that I can
@@ -1690,19 +1694,20 @@ print(df.lambchops)</code></pre>
 ## 3      a         1
 ## 4 little         6
 ## 5   lamb         4</code></pre>
-<p>All in a good day’s work!</p>
+<p>All in a good day’s work! <br> <br></p>
 </div>
-<div id="homework-two" class="section level2">
-<h2>Homework Two</h2>
-<p>Well it looks like we have another assignment, this one took a little
-more elbow grease than the last time… Don’t mind the mess, but if it
-works it works (cue chuckle)</p>
+<div id="homework-2-worser" class="section level2">
+<h2>Homework 2: Worser</h2>
+<p><br> Well it looks like we have another assignment, this one took a
+little more elbow grease than the last time… Don’t mind the mess, but if
+it works it works (cue chuckle)</p>
 <p>First step is loading in the file needed to be cleaned!</p>
 <ol style="list-style-type: decimal">
 <li>Read ‘sticks_messy.txt’ into R</li>
 </ol>
 <pre class="r"><code># Here, I am loading in the messy_txt to clean
 messy_txt &lt;- readLines(&quot;/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week2_nlp/data/sticks_messy.txt&quot;)</code></pre>
+<p><br></p>
 <p>I combined the next steps into a function called springcleaning!</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Create a cleaning function with at least three chained
@@ -2752,6 +2757,7 @@ some
 </tbody>
 </table>
 </div>
+<p><br></p>
 <p>Now that the hard part is out of the way, it’s all easy from
 here.</p>
 <ol start="5" style="list-style-type: decimal">
@@ -2761,6 +2767,7 @@ here.</p>
 # the text
 nrow(springcleaning())</code></pre>
 <pre><code>## [1] 401</code></pre>
+<p><br></p>
 <p>Oh, another function; well, this one is not that bad.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>Compute type token ratio</li>
@@ -2784,10 +2791,2098 @@ nrow(springcleaning())</code></pre>
 ttr()</code></pre>
 <pre><code>## [1] 0.5710723</code></pre>
 <p>All done!</p>
-<p>Keep an eye out for Homework 3!</p>
+<p>Keep an eye out for Homework 3! <br> <br></p>
 </div>
-<div id="homework-three" class="section level2">
-<h2>Homework Three</h2>
+<div id="homework-3-worse-est" class="section level2">
+<h2>Homework 3: Worse-est</h2>
+<p><br> Elbow grease here!</p>
+<pre class="r"><code>messy_txt &lt;- readLines(&quot;/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week2_nlp/data/sticks_messy.txt&quot;)</code></pre>
+<pre class="r"><code>springcleaning2.0 &lt;- function() {
+
+    # Loading in stop words from SMART and MIT
+    load(&quot;/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda&quot;)
+
+    load(&quot;/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda&quot;)
+
+    load(&quot;/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda&quot;)
+
+    messy_txt &lt;- gsub(&quot;[[:digit:]]&quot;, &quot;&quot;, messy_txt)
+
+    # Making all the words in the text lowercase
+    gtext.low &lt;- tolower(messy_txt)
+
+    # Removing words from the SMART list
+    gtext.smart &lt;- gsub(paste0(&quot;\\b(&quot;, paste(SMART_stops$word, collapse = &quot;|&quot;), &quot;)\\b&quot;),
+        &quot;&quot;, gtext.low)
+
+    # Replacing contractions with their government names; I unlocked a new R
+    # code setNames
+    gtext.cont &lt;- str_replace_all(gtext.smart, setNames(replacements_25$replacement,
+        replacements_25$word))
+
+    # Removing stop words using MIT (Most Important Text)
+    gtext.MIT &lt;- gsub(paste0(&quot;\\b(&quot;, paste(MIT_stops$word, collapse = &quot;|&quot;), &quot;)\\b&quot;),
+        &quot;&quot;, gtext.cont)
+
+    # Removing erroneous punctuation from the text
+    gtext &lt;- gsub(&quot;[[:punct:]]&quot;, &quot;&quot;, gtext.MIT)
+
+    # Removing random spaces from the text
+    gtext2 &lt;- gsub(&quot;[[:space:]]&quot;, &quot; &quot;, gtext)
+
+    # Splits the words by space
+    splitstring2.0 = strsplit(gtext2, &quot; &quot;)
+
+    # Unlisting the texts in the file
+    splitstring.unlist2.0 &lt;- unlist(splitstring2.0)
+
+    # This makes a data frame with a word per row (I like lamb chops
+    # (literally), so I kept it)
+    df_lambchops2.0 &lt;- data.frame(x = splitstring.unlist2.0)
+
+    # A new data fram is made and excludes cells that are empty
+    df_lamb2.0 &lt;- df_lambchops2.0 %&gt;%
+        filter(x != &quot;&quot;)
+
+    # Renaming the column for organizational purposes to &#39;Words&#39; instead of &#39;x&#39;
+    colnames(df_lamb2.0)[1] &lt;- &quot;Words&quot;
+
+    # Returning a new data frame!
+    return(df_lamb2.0)
+}
+
+
+# *Cracks knuckles* Moment of truth
+springcleaning2.0()</code></pre>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:700px; ">
+<table class="table lightable-paper lightable-striped" style="color: black; margin-left: auto; margin-right: auto; font-size: 12px; color: black; font-family: Helvetica; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;color: white !important;background-color: rgba(91, 112, 95, 255) !important;font-size: 12px;position: sticky; top:0; background-color: #FFFFFF;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+year
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hlj
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+thanksgiving
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+n
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ight
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+o
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flocked
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+oihjoij
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+kpoanl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dragged
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+santa
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+suit
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+road
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+draped
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+kind
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+crucifix
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+built
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+metal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yard
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+super
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bowl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+week
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dressed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+jersey
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+rods
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+helmet
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+rod
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+clear
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wanted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+helmet
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+july
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+uncle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sam
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+veterans
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+day
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+soldier
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+halloween
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ghost
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dads
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+concession
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+glee
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+allowed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+single
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+crayola
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+box
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+christmas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eve
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrieked
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+kimmie
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wasting
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+apple
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+slice
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hovered
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+poured
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ketchup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+birthday
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+parties
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+consisted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cupcakes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ice
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cream
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+brought
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+date
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+blinking
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+left
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+h
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mome
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+married
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+children
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+found
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+seeds
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+meanness
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+blooming
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+began
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dressing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mcomplexity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+less
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+discernible
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+logic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+draped
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+kind
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fur
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+groundhog
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+day
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lugged
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+floodlight
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ensure
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shadow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+earthquake
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+struck
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+chile
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lay
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+side
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+spray
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+painted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+rift
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+earth
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mom
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+died
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dressed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+death
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hung
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+crossbar
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+photos
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mom
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+baby
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stop
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+find
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+odd
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+talismans
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+youth
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arranged
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+base
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+army
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+medals
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+theater
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tickets
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+old
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sweatshirts
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tubes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+moms
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+makeup
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+autumn
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+painted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bright
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yellow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+covered
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cotton
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+swabs
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+winter
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+warmth
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+offspring
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hammering
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+crossed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sticks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yard
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ran
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lengths
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+string
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sticks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+taped
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+string
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+letters
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+apology
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+admissions
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+error
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pleas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+understanding
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+written
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+frantic
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hand
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+index
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cards
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+painted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sign
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+love
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hung
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+forgive
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+died
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hall
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+radio
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sold
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+house
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+young
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+couple
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yanked
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pole
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sticks
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+left
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+road
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+garbage
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+day
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Let us test this function! It ain’t much but it’s honest work around
+here…</p>
+<pre class="r"><code># For my next feat, I have pulled texts from The Onion to test the cleaning
+# genie2.0!
+messy_txt &lt;- c(&quot;Facing intense backlash and scrutiny from critics who say the reference book publisher had failed to take all words into consideration, Merriam-Webster was accused of bias Monday after officially selecting ‘dictionary’ as its 2025 word of the year. “Merriam-Webster clearly has a pro-dictionary bias that’s preventing it from considering all words equally,” lexicographer Alison Nielsen wrote in a widely shared social media post that lambasted the Merriam-Webster editorial team, claiming its members had allowed a “personal affinity for looking up words” to cloud their judgment. “I was willing to overlook it last year when their word of the year was ‘definition,’ but I can’t allow myself to turn a blind eye to this. The Merriam-Webster editorial board is stuck in its own media bubble. They need to look around and read a thesaurus once in a while.” At press time, reports confirmed Merriam-Webster appeared to have doubled down by changing the 2025 word of the year to “dictionaries.”&quot;,
+    &quot;“I love having this killer coat in the winter, especially when me and my buddies are cruising around and blasting tunes in my old Mustang, which doesn’t have any heat,” said Lockhart, stretching his lean frame over a pool table to sink a bank shot as he spoke to reporters about how he spends much of his time fixing up the muscle car, which has a faded King Cobra decal on the hood. “Bundle Up Our Bad Boys understands that when a guy like me looks good, he feels good. I’ve become more successful in all areas of my life, whether it’s picking up broads, fighting some jock who dissed me, or street racing at night around a deadly bend on the edge of town.”&quot;,
+    &quot;Stifling their groans as an instructor distributed the wailing infants, students at the Culinary Institute of America were reportedly given a live baby Friday to learn how to care for a bag of flour. “Flour is the most delicate of the pantry staples, and looking after this child for the week will prepare you to deal with the complexities of milled grain,” said Inès Allard, who teaches introduction to baking and pastry at the school, explaining that the students would have to keep the baby from leaking just as they would need to do with an actual sack of processed wheat. “I know it’s not a real bag of flour, but it’s important to take this seriously. And trust me, this is easy mode—babies can be left out in the open, but if you do that with flour, you get ants. If you can’t handle a live infant, then you sure as hell aren’t ready for 10 pounds of ultra-fine pizza flour crafted from the highest-quality varieties of soft wheat.” At press time, reports indicated that many students had already decided it would be too much work to have a flour bag of their own.&quot;)</code></pre>
+<p>All texts are courtesy of The Onion and their talented writers!
+Please view here:
+<a href="https://theonion.com/merriam-webster-accused-of-bias-after-dictionary-named-word-of-the-year/" target="_blank">The
+Onion: Dictionary</a>,
+<a href="https://theonion.com/community-leather-coat-drive-helps-bad-boys-in-need/" target="_blank">The
+Onion: Leather Jacket</a>,
+<a href="https://theonion.com/culinary-students-given-live-baby-to-learn-how-to-care-for-bag-of-flour/">The
+Onion: Chef Baby</a></p>
+<p>Ta-da! Are you impressed? Probably not, do not answer that.</p>
+<pre class="r"><code>springcleaning2.0()</code></pre>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:700px; ">
+<table class="table lightable-paper lightable-striped" style="color: black; margin-left: auto; margin-right: auto; font-size: 12px; color: black; font-family: Helvetica; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;color: white !important;background-color: rgba(91, 112, 95, 255) !important;font-size: 12px;position: sticky; top:0; background-color: #FFFFFF;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+facing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+intense
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+backlash
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+scrutiny
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+critics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reference
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+book
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+publisher
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+failed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+words
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+consideration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merriamwebster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+accused
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bias
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+monday
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+officially
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+selecting
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dictionary
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+word
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merriamwebster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+prodictionary
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bias
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+preventing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+words
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+equally
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lexicographer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+alison
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nielsen
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wrote
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+widely
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shared
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+social
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+media
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+post
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lambasted
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merriamwebster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+editorial
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+team
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+claiming
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+members
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+allowed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+personal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+affinity
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+words
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cloud
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+judgment
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+overlook
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+last
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+word
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+definition
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+not
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+turn
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+blind
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eye
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merriamwebster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+editorial
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+board
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stuck
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+media
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bubble
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+read
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+thesaurus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+press
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reports
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+confirmed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+merriamwebster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+appeared
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+doubled
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+changing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+word
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dictionaries
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+love
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+killer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+coat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+winter
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+buddies
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cruising
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+blasting
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tunes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+old
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+mustang
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+not
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+heat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lockhart
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stretching
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lean
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+frame
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pool
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+table
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sink
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bank
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shot
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+spoke
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reporters
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+spends
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+time
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fixing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+muscle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+faded
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+king
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cobra
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+decal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hood
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bundle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+boys
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+understands
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+guy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+like
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+feels
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ve
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+become
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+successful
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+areas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+life
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+picking
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+broads
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fighting
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+jock
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dissed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+street
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+racing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+night
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+deadly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bend
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+edge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+town
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stifling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+groans
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+instructor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+distributed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wailing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+infants
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+students
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+culinary
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+institute
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+america
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+reportedly
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+given
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+live
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+baby
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+friday
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+learn
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+care
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bag
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flour
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flour
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+delicate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pantry
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+staples
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+child
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+week
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+prepare
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+deal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+complexities
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+milled
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+grain
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+inès
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+allard
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+teaches
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+introduction
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+baking
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pastry
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+school
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+explaining
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+students
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+keep
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+baby
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+leaking
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+actual
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sack
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+processed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+wheat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+real
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bag
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flour
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+important
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+trust
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+easy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+modebabies
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+left
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+open
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flour
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ants
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+not
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+handle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+live
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+infant
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>I luv the Onion (sometimes), anyways that is a wrap folks!</p>
 </div>
 </div>
 

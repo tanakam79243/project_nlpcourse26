@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(fig.width=8, fig.height=5, fig.align = 'left', fig.path='Figs/', cache.path='Cache/', eval=T, echo=T, tidy=TRUE,  cache=F, message=F, warning=F, stringsAsFactors=F, yaml.eval.expr = TRUE)  
 
 library(xfun)
-pkg_attach("tidyverse", "here", "kableExtra", "RCurl", "psych", "knitr", "RColorBrewer", 'dplyr', install=T)
+pkg_attach("tidyverse", "here", "kableExtra", "RCurl", "psych", "knitr", "RColorBrewer", 'dplyr', 'readr', install=T)
 
 jamie.theme <- theme_bw() + theme(axis.line = element_line(colour = "black"), panel.grid.minor = element_blank(), panel.grid.major = element_blank(), panel.border = element_blank(), panel.background = element_blank(), legend.title= element_blank())  #custom theme ggplot2
 
@@ -46,32 +46,43 @@ registerS3method("knit_print", "data.frame", print.me)
 #install.packages("formatR")
 library(formatR)
 ```
+<br>
 
-#                              RENOVATION UNDERWAY
+
+# RENOVATION UNDERWAY
 
 More content to come...
 
 # Note of the Day:
 
-Sorry for the delay. OneDrive is the root of all evil. GitHub supremacy
+What are the chances in which lunch and funeral occur in the same 30-word window? The chances are low but never zero...
 
-# Coder's File
+# Coder's Note
 
-## Coder's Note
 Welcome to my hub! Here, I will be periodically documenting my coding journey. Some code you will see will make you squint your eyes in confusion. Don't fret! Look the other way and recognize that the code works, equivalent to that of duct tape. Over time, I will upgrade from duct tape to b7000. The metaphor may not make sense but all this just to say enjoy the process of my code writing! Throughout the journey, there will be fun tidbits sprinkled throughout the page to distract from the code, don't get side tracked!  
 
-## Code Snippets
+
+# Code Snippets
+
+Here is a bank of code snippets to help you (more so me) with your coding!
+
+## Code Snippet 1
+```{r}
+
+```
 
 
 # Homework
 
-Here are all the homeworks for this class!
+This is just a simple repository of the homework assignments
+<br>
 
-## Homework One
-
+## Homework 1: Worse
+<br>
 For my first homework I am going to produce is a string called "Mary had a little lamb" in one code block. Then I'm going to split the string to one word per row. Then I'm going to add a variable called Nletters that counts the letters in each word. The other part of your homework is to style your css to your personal needs.
 
- 
+ <br>
+
 So, step one is to produce the string "Mary had a Little Lamb"
 
 ```{r}
@@ -82,6 +93,7 @@ print(my_string)
 ```
 
 That seemed easy...
+<br>
 
 Now, we are going to take the string "Mary had a little lamb" and put it into a data frame that counts the number of letters/characters in each word. The challenge is being able to create a table that I can simply change the string and it will automatically update; so a bit of elbow grease was used, but nevertheless here is the code:
 
@@ -105,11 +117,11 @@ print(df.lambchops)
 ```
 
 All in a good day's work! 
+<br>
+<br>
 
-
-
-## Homework Two
-
+## Homework 2: Worser
+<br>
 Well it looks like we have another assignment, this one took a little more elbow grease than the last time...
 Don't mind the mess, but if it works it works (cue chuckle)
 
@@ -122,7 +134,7 @@ First step is loading in the file needed to be cleaned!
 messy_txt <- readLines('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week2_nlp/data/sticks_messy.txt')
   
 ```
-
+<br>
 
 I combined the next steps into a function called springcleaning!
 
@@ -159,7 +171,7 @@ springcleaning <- function() {
 springcleaning()
 
 ```
-
+<br>
 
 Now that the hard part is out of the way, it's all easy from here.
 
@@ -170,7 +182,7 @@ Now that the hard part is out of the way, it's all easy from here.
 nrow(springcleaning())
 
 ```
-
+<br>
 
 Oh, another function; well, this one is not that bad.
 
@@ -199,11 +211,99 @@ ttr()
 All done! 
 
 Keep an eye out for Homework 3!
+<br>
+<br>
+
+## Homework 3: Worse-est
+<br>
+Elbow grease here! 
+
+```{r}
+
+messy_txt <- readLines(
+  "/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week2_nlp/data/sticks_messy.txt"
+)
+
+```
 
 
 
+```{r}
 
 
-## Homework Three
+springcleaning2.0 <- function() { 
+  
+#Loading in stop words from SMART and MIT 
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+
+  
+    messy_txt <- gsub("[[:digit:]]","",messy_txt)
+    
+  #Making all the words in the text lowercase
+    gtext.low <- tolower(messy_txt)
+    
+  #Removing words from the SMART list
+    gtext.smart <- gsub(paste0("\\b(", paste(SMART_stops$word, collapse="|"), ")\\b"), "", gtext.low)
+  
+  #Replacing contractions with their government names; I unlocked a new R code setNames
+    gtext.cont <- str_replace_all(gtext.smart, setNames(replacements_25$replacement, replacements_25$word))
+    
+  #Removing stop words using MIT  (Most Important Text) 
+    gtext.MIT <- gsub(paste0("\\b(", paste(MIT_stops$word, collapse="|"), ")\\b"), "", gtext.cont)
+ 
+  #Removing erroneous punctuation from the text
+    gtext <- gsub("[[:punct:]]","",gtext.MIT) 
+    
+  #Removing random spaces from the text
+    gtext2 <- gsub("[[:space:]]"," ", gtext) 
+              
+  #Splits the words by space
+    splitstring2.0 = strsplit(gtext2, " ")
+    
+  #Unlisting the texts in the file
+    splitstring.unlist2.0 <- unlist(splitstring2.0)
+    
+  #This makes a data frame with a word per row (I like lamb chops (literally), so I kept it)
+    df_lambchops2.0 <- data.frame(x = splitstring.unlist2.0)
+    
+  #A new data fram is made and excludes cells that are empty
+    df_lamb2.0 <- df_lambchops2.0 %>% filter(x != "")
+  
+  #Renaming the column for organizational purposes to "Words" instead of "x"
+    colnames(df_lamb2.0)[1] <- "Words"
+    
+  #Returning a new data frame!
+    return(df_lamb2.0) 
+} 
 
 
+# *Cracks knuckles* Moment of truth
+springcleaning2.0()
+
+```
+
+Let us test this function! It ain't much but it's honest work around here...
+
+```{r}
+
+#For my next feat, I have pulled texts from The Onion to test the cleaning genie2.0!
+messy_txt <- c(
+  "Facing intense backlash and scrutiny from critics who say the reference book publisher had failed to take all words into consideration, Merriam-Webster was accused of bias Monday after officially selecting ‘dictionary’ as its 2025 word of the year. “Merriam-Webster clearly has a pro-dictionary bias that’s preventing it from considering all words equally,” lexicographer Alison Nielsen wrote in a widely shared social media post that lambasted the Merriam-Webster editorial team, claiming its members had allowed a “personal affinity for looking up words” to cloud their judgment. “I was willing to overlook it last year when their word of the year was ‘definition,’ but I can’t allow myself to turn a blind eye to this. The Merriam-Webster editorial board is stuck in its own media bubble. They need to look around and read a thesaurus once in a while.” At press time, reports confirmed Merriam-Webster appeared to have doubled down by changing the 2025 word of the year to “dictionaries.”", 
+  "“I love having this killer coat in the winter, especially when me and my buddies are cruising around and blasting tunes in my old Mustang, which doesn’t have any heat,” said Lockhart, stretching his lean frame over a pool table to sink a bank shot as he spoke to reporters about how he spends much of his time fixing up the muscle car, which has a faded King Cobra decal on the hood. “Bundle Up Our Bad Boys understands that when a guy like me looks good, he feels good. I’ve become more successful in all areas of my life, whether it’s picking up broads, fighting some jock who dissed me, or street racing at night around a deadly bend on the edge of town.”",
+  "Stifling their groans as an instructor distributed the wailing infants, students at the Culinary Institute of America were reportedly given a live baby Friday to learn how to care for a bag of flour. “Flour is the most delicate of the pantry staples, and looking after this child for the week will prepare you to deal with the complexities of milled grain,” said Inès Allard, who teaches introduction to baking and pastry at the school, explaining that the students would have to keep the baby from leaking just as they would need to do with an actual sack of processed wheat. “I know it’s not a real bag of flour, but it’s important to take this seriously. And trust me, this is easy mode—babies can be left out in the open, but if you do that with flour, you get ants. If you can’t handle a live infant, then you sure as hell aren’t ready for 10 pounds of ultra-fine pizza flour crafted from the highest-quality varieties of soft wheat.” At press time, reports indicated that many students had already decided it would be too much work to have a flour bag of their own.")
+```
+All texts are courtesy of The Onion and their talented writers! Please view here: <a href="https://theonion.com/merriam-webster-accused-of-bias-after-dictionary-named-word-of-the-year/" target="_blank">The Onion: Dictionary</a>, <a href="https://theonion.com/community-leather-coat-drive-helps-bad-boys-in-need/" target="_blank">The Onion: Leather Jacket</a>, <a href="https://theonion.com/culinary-students-given-live-baby-to-learn-how-to-care-for-bag-of-flour/">The Onion: Chef Baby</a>
+
+
+Ta-da! Are you impressed? Probably not, do not answer that.
+```{r}
+
+springcleaning2.0()
+
+```
+
+I luv the Onion (sometimes), anyways that is a wrap folks!
