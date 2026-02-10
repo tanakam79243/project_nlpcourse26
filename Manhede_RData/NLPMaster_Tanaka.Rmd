@@ -60,20 +60,9 @@ What are the chances in which lunch and funeral occur in the same 30-word window
 
 # Coder's Note
 
-Welcome to my hub! Here, I will be periodically documenting my coding journey. Some code you will see will make you squint your eyes in confusion. Don't fret! Look the other way and recognize that the code works, equivalent to that of duct tape. Over time, I will upgrade from duct tape to b7000. The metaphor may not make sense but all this just to say enjoy the process of my code writing! Throughout the journey, there will be fun tidbits sprinkled throughout the page to distract from the code, don't get side tracked!  
+Welcome to my hub! Here, I will be periodically documenting my coding journey. Some code you will see will make you squint your eyes in confusion. Don't fret! Look the other way and recognize that the code works, equivalent to that of duct tape. Over time, I will upgrade from duct tape to b7000; all this to say enjoy the process of my code writing! Throughout the journey, there will be fun tidbits sprinkled throughout the page to distract from the code, don't get side tracked!  
 <br>
 <br>
-
-# Code Snippets
-
-Here is a bank of code snippets to help you (more so me) with your coding!
-<br>
-<br>
-
-## Code Snippet 1
-```{r}
-
-```
 
 
 # Homework
@@ -81,7 +70,7 @@ Here is a bank of code snippets to help you (more so me) with your coding!
 This is just a simple repository of the homework assignments
 <br>
 
-## Homework 1: Worse
+## Homework 1
 
 For my first homework I am going to produce is a string called "Mary had a little lamb" in one code block. Then I'm going to split the string to one word per row. Then I'm going to add a variable called Nletters that counts the letters in each word. The other part of your homework is to style your css to your personal needs.
 <br>
@@ -125,7 +114,7 @@ All in a good day's work!
 <br>
 <br>
 
-## Homework 2: Worser
+## Homework 2
 
 Well it looks like we have another assignment, this one took a little more elbow grease than the last time...
 Don't mind the mess, but if it works it works (cue chuckle)
@@ -221,7 +210,7 @@ Keep an eye out for Homework 3!
 <br>
 <br>
 
-## Homework 3: Worse-est
+## Homework 3
 <br>
 Elbow grease here! 
 
@@ -314,3 +303,17 @@ springcleaning2.0()
 ```
 
 I luv the Onion (sometimes), anyways that is a wrap folks!
+
+
+
+<!-- # Code Snippets -->
+
+<!-- Here is a bank of code snippets to help you (more so me) with your coding! -->
+<!-- <br> -->
+<!-- <br> -->
+
+<!-- ## Code Snippet 1 -->
+<!-- ```{r} -->
+
+<!-- ``` -->
+
