@@ -1415,7 +1415,7 @@ padding-left: 0px;
 
 h1.title {color: white;
 font-size: 16pt;
-background-color: #203D23;
+background-color: #F0B6E3;
 padding-top: 1em;
 padding-bottom: .2em;
 padding-right: .2em;
@@ -1701,7 +1701,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">NLP Code Snippet Cheat Sheet</h1>
 <h4 class="author">Tanaka</h4>
-<h4 class="date">January 2026</h4>
+<h4 class="date">February 2026</h4>
 
 </div>
 
@@ -1711,14 +1711,18 @@ border-radius: 0px;
 <p>Below are code snippets that will be continuously updated!</p>
 <div id="importing-files-from-online-repositories" class="section level2">
 <h2>Importing files from online repositories!</h2>
-<p>Are you tired of continuously updating file pathways to match your
-local file repository? Look no further</p>
+<ol style="list-style-type: decimal">
+<li>Are you tired of continuously updating file pathways to match your
+local file repository? Look no further</li>
+</ol>
 <pre class="r"><code># Here, I am loading in unabomber texts from an online repository!
 test1 &lt;- paste(readLines(&quot;https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt&quot;))</code></pre>
 </div>
 <div id="make-a-function" class="section level2">
 <h2>Make a function</h2>
-<p>You can make a function to build unique functions</p>
+<ol start="2" style="list-style-type: decimal">
+<li>You can make a function to build unique functions</li>
+</ol>
 <pre class="r"><code># Here, you can make your own function! The input of the function is a vector
 # which the coder will insert any variable and will get the result due to the
 # function containing select commands
@@ -1738,8 +1742,10 @@ myfunc(3, 2)</code></pre>
 </div>
 <div id="gsub-global-substitution" class="section level2">
 <h2>Gsub (global substitution)</h2>
-<p>gsub is a great function that can remove and replace things you want
-and don’t need</p>
+<ol start="3" style="list-style-type: decimal">
+<li>gsub is a great function that can remove and replace things you want
+and don’t need</li>
+</ol>
 <pre class="r"><code># Just loading in the some text
 badtoken &lt;- &quot;Mary had a little lamb&quot;
 # The [[:punct:]] observes all punctuation in the token, the &#39; &#39; is to replaces
@@ -1749,7 +1755,9 @@ gonestring &lt;- gsub(&quot;[[:punct:]]&quot;, &quot;&quot;, badtoken)</code></p
 </div>
 <div id="lowercase" class="section level2">
 <h2>lowercase</h2>
-<p>if you want lowercase text, use this function!</p>
+<ol start="4" style="list-style-type: decimal">
+<li>if you want lowercase text, use this function!</li>
+</ol>
 <pre class="r"><code># Loading in a file to mess
 badtoken &lt;- &quot;Mary Had A Little Lamb&quot;
 
@@ -1761,17 +1769,61 @@ print(x)</code></pre>
 </div>
 <div id="splitting-strings" class="section level2">
 <h2>Splitting strings</h2>
-<p>Another easy code snippet worth mentioning since we are in the realm
+<ol start="5" style="list-style-type: decimal">
+<li>Another easy code snippet worth mentioning since we are in the realm
 of NLP. This code is good when you want to tokenize the text you
-have.</p>
+have.</li>
+</ol>
 <pre class="r"><code># Here is a few lines of code that we can to
 gonestring &lt;- &quot;Mary had a little lamb&quot;
 
 splitstring = str_split(gonestring, &quot; &quot;)</code></pre>
 </div>
+<div id="make-a-corpus" class="section level2">
+<h2>Make a corpus!</h2>
+<ol start="6" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code># my_simple_corpus &lt;- corpus(dat, docid_field = &#39;author&#39;, text_field =
+# &#39;doc_text&#39;)</code></pre>
 </div>
-<div id="more-code-snippets-to-come" class="section level1">
-<h1>More code snippets to come…</h1>
+<div id="a-function-for-replacing-words" class="section level2">
+<h2>A function for replacing words!</h2>
+<ol start="7" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code># Function to replace a word in a target data frame with a replacement word
+replace_words &lt;- function(text_vector, replacement_df) {
+    # Replace each bad word with its corresponding good word
+    for (i in seq_len(nrow(replacement_df))) {
+        text_vector &lt;- gsub(pattern = replacement_df$mybad[i], replacement = replacement_df$mygood[i],
+            x = text_vector, ignore.case = TRUE)
+    }
+    return(text_vector)
+}</code></pre>
+</div>
+<div id="i-can-add-breaks-now" class="section level2">
+<h2>I can add breaks now!</h2>
+<ol start="8" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code># &lt;br&gt; &lt;br&gt;</code></pre>
+</div>
+<div id="saving-a-file" class="section level2">
+<h2>Saving a file</h2>
+<ol start="9" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code># save(mysample,
+# file=&#39;/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/Week2_nlp/archive/mysample.rda&#39;)</code></pre>
+</div>
+<div id="leaves-only-letters-and-removes-numbers-and-punctuation" class="section level2">
+<h2>Leaves only letters and removes numbers and punctuation</h2>
+<ol start="10" style="list-style-type: decimal">
+<li></li>
+</ol>
+<pre class="r"><code>x &lt;- gsub(&quot;[^A-Za-z ]&quot;, &quot;&quot;, x)</code></pre>
+</div>
 </div>
 
 

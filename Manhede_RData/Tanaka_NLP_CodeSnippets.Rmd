@@ -8,7 +8,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 2
-    css: !expr here::here("/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/styles_templates/jr_19.css")
+    css: !expr here::here("/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/styles_templates/jr_19.css")
 ---
 
 ```{r setup, include=F}
@@ -45,7 +45,7 @@ Below are code snippets that will be continuously updated!
 
 
 ## Importing files from online repositories!
-Are you tired of continuously updating file pathways to match your local file repository? Look no further
+1. Are you tired of continuously updating file pathways to match your local file repository? Look no further
 ```{r}
 #Here, I am loading in unabomber texts from an online repository!
 test1 <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt'))
@@ -54,7 +54,7 @@ test1 <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCogni
 
 
 ## Make a function
-You can make a function to build unique functions
+2. You can make a function to build unique functions
 ```{r}
 #Here, you can make your own function! The input of the function is a vector which the coder will insert any variable and will get the result due to the function containing select commands
 myfunc <- function(x,y) { 
@@ -73,7 +73,7 @@ myfunc(3,2)
 
 
 ## Gsub (global substitution)
-gsub is a great function that can remove and replace things you want and don't need  
+3. gsub is a great function that can remove and replace things you want and don't need  
 ```{r}
 #Just loading in the some text
 badtoken <- "Mary had a little lamb"
@@ -84,7 +84,7 @@ gonestring <- gsub("[[:punct:]]","",badtoken)
 
 
 ## lowercase
-if you want lowercase text, use this function!
+4. if you want lowercase text, use this function!
 ```{r}
 #Loading in a file to mess
 badtoken <- "Mary Had A Little Lamb"
@@ -97,7 +97,7 @@ print(x)
 
 
 ## Splitting strings
-Another easy code snippet worth mentioning since we are in the realm of NLP. This code is good when you want to tokenize the text you have.
+5. Another easy code snippet worth mentioning since we are in the realm of NLP. This code is good when you want to tokenize the text you have.
 ```{r}
 #Here is a few lines of code that we can to
 gonestring <- "Mary had a little lamb"
@@ -106,4 +106,56 @@ splitstring = str_split(gonestring, " ")
 
 ```
 
-# More code snippets to come...
+## Make a corpus!
+
+6.
+```{r}
+#my_simple_corpus  <- corpus(dat, docid_field = "author", text_field = "doc_text")  
+
+```
+
+
+## A function for replacing words!
+7.
+```{r}
+# Function to replace a word in a target data frame with a replacement word
+replace_words <- function(text_vector, replacement_df) {
+ # Replace each bad word with its corresponding good word
+ for (i in seq_len(nrow(replacement_df))) {
+   text_vector <- gsub(
+     pattern = replacement_df$mybad[i],
+     replacement = replacement_df$mygood[i],
+     x = text_vector,
+     ignore.case = TRUE
+   )
+ }
+ return(text_vector)
+}
+```
+
+
+## I can add breaks now!
+8. 
+```{r}
+
+#<br> 
+#  <br>
+  
+```
+
+
+## Saving a file
+9.  
+```{r}
+#save(mysample, file='/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/Week2_nlp/archive/mysample.rda')
+```
+
+
+## Leaves only letters and removes numbers and punctuation 
+10.
+```{r}
+
+x <- gsub("[^A-Za-z ]","",x) 
+
+```
+
