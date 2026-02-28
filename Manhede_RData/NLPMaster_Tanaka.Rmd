@@ -7,7 +7,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 3
-    css: !expr here::here("/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/styles_templates/jr_19.css")
+    css: !expr here::here("~/Documents/GitHub/project_nlpcourse26/Manhede_RData/styles_templates/tm_professional.css")
 ---
 
 ```{r setup, include=F}
@@ -47,35 +47,22 @@ registerS3method("knit_print", "data.frame", print.me)
 library(formatR)
 ```
 
-#  RENOVATION UNDERWAY
+# Introduction
 
-Don't mind the mess here!
-<br>
-<br>
+This document serves as a central repository for assignments, and cleaning genies. The assignment section contains subsections highlighting a different coding assignment.
 
-# Note of the Day
-What are the chances in which lunch and funeral occur in the same 30-word window? The chances are low but never zero...
-<br>
 <br>
 
-# Coder's Note
+# Assignments
 
-Welcome to my hub! Here, I will be periodically documenting my coding journey. Some code you will see will make you squint your eyes in confusion. Don't fret! Look the other way and recognize that the code works, equivalent to that of duct tape. Over time, I will upgrade from duct tape to b7000; all this to say enjoy the process of my code writing! Throughout the journey, there will be fun tidbits sprinkled throughout the page to distract from the code, don't get side tracked!  
-<br>
-<br>
+This segment contains all assignments
 
-
-# Homework
-
-This is just a simple repository of the homework assignments
 <br>
 
-## Homework 1
+## Assignment 1
 
-For my first homework I am going to produce is a string called "Mary had a little lamb" in one code block. Then I'm going to split the string to one word per row. Then I'm going to add a variable called Nletters that counts the letters in each word. The other part of your homework is to style your css to your personal needs.
+For the first assignment, I am going to produce a string called "Mary had a little lamb" in one code block. Then I am going to split the string to one word per row. Next, I am going to add a variable called Nletters that counts the letters in each word. The other part of the assignment is to style the css to personal needs.
 <br>
-<br>
-
 So, step one is to produce the string "Mary had a Little Lamb"
 
 ```{r}
@@ -85,11 +72,7 @@ print(my_string)
 
 ```
 
-That seemed easy...
-<br>
-<br>
-
-Now, we are going to take the string "Mary had a little lamb" and put it into a data frame that counts the number of letters/characters in each word. The challenge is being able to create a table that I can simply change the string and it will automatically update; so a bit of elbow grease was used, but nevertheless here is the code:
+Now, we are going to take the string "Mary had a little lamb" and put it into a data frame that counts the number of letters/characters in each word. The challenge is being able to create a table that I can simply change the string and it will automatically update:
 
 ```{r}
 
@@ -110,18 +93,13 @@ print(df.lambchops)
 
 ```
 
-All in a good day's work! 
-<br>
 <br>
 
-## Homework 2
+## Assignment 2
 
 Well it looks like we have another assignment, this one took a little more elbow grease than the last time...
-Don't mind the mess, but if it works it works (cue chuckle)
-<br>
-<br>
 
-First step is loading in the file needed to be cleaned!
+First step is loading in the file needed to be cleaned.
 
 1) Read 'sticks_messy.txt' into R
 
@@ -132,7 +110,7 @@ messy_txt <- readLines('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse2
 ```
 <br>
 
-I combined the next steps into a function called springcleaning!
+I combined the next steps into a function called springcleaning
 
 2) Create a cleaning function with at least three chained procedures
 3) Clean the text file using your homemade cleaning function
@@ -169,7 +147,6 @@ springcleaning()
 ```
 <br>
 
-Now that the hard part is out of the way, it's all easy from here.
 
 5) Tell me how many words are in the story
 
@@ -180,7 +157,6 @@ nrow(springcleaning())
 ```
 <br>
 
-Oh, another function; well, this one is not that bad.
 
 6) Compute type token ratio
 
@@ -206,13 +182,13 @@ ttr()
 
 All done! 
 
-Keep an eye out for Homework 3!
+Keep an eye out for assignment 3!
 <br>
 <br>
 
-## Homework 3
+## Assignment 3
 <br>
-Elbow grease here! 
+
 
 ```{r}
 
@@ -225,7 +201,6 @@ messy_txt <- readLines(
 
 
 ```{r}
-
 
 springcleaning2.0 <- function() { 
   
@@ -282,7 +257,7 @@ springcleaning2.0()
 
 ```
 
-Let us test this function! It ain't much but it's honest work around here...
+The function is now tested:
 
 ```{r}
 
@@ -292,28 +267,665 @@ messy_txt <- c(
   "“I love having this killer coat in the winter, especially when me and my buddies are cruising around and blasting tunes in my old Mustang, which doesn’t have any heat,” said Lockhart, stretching his lean frame over a pool table to sink a bank shot as he spoke to reporters about how he spends much of his time fixing up the muscle car, which has a faded King Cobra decal on the hood. “Bundle Up Our Bad Boys understands that when a guy like me looks good, he feels good. I’ve become more successful in all areas of my life, whether it’s picking up broads, fighting some jock who dissed me, or street racing at night around a deadly bend on the edge of town.”",
   "Stifling their groans as an instructor distributed the wailing infants, students at the Culinary Institute of America were reportedly given a live baby Friday to learn how to care for a bag of flour. “Flour is the most delicate of the pantry staples, and looking after this child for the week will prepare you to deal with the complexities of milled grain,” said Inès Allard, who teaches introduction to baking and pastry at the school, explaining that the students would have to keep the baby from leaking just as they would need to do with an actual sack of processed wheat. “I know it’s not a real bag of flour, but it’s important to take this seriously. And trust me, this is easy mode—babies can be left out in the open, but if you do that with flour, you get ants. If you can’t handle a live infant, then you sure as hell aren’t ready for 10 pounds of ultra-fine pizza flour crafted from the highest-quality varieties of soft wheat.” At press time, reports indicated that many students had already decided it would be too much work to have a flour bag of their own.")
 ```
-All texts are courtesy of The Onion and their talented writers! Please view here: <a href="https://theonion.com/merriam-webster-accused-of-bias-after-dictionary-named-word-of-the-year/" target="_blank">The Onion: Dictionary</a>, <a href="https://theonion.com/community-leather-coat-drive-helps-bad-boys-in-need/" target="_blank">The Onion: Leather Jacket</a>, <a href="https://theonion.com/culinary-students-given-live-baby-to-learn-how-to-care-for-bag-of-flour/">The Onion: Chef Baby</a>
+All texts are courtesy of The Onion and their talented writers. Please view here: <a href="https://theonion.com/merriam-webster-accused-of-bias-after-dictionary-named-word-of-the-year/" target="_blank">The Onion: Dictionary</a>, <a href="https://theonion.com/community-leather-coat-drive-helps-bad-boys-in-need/" target="_blank">The Onion: Leather Jacket</a>, <a href="https://theonion.com/culinary-students-given-live-baby-to-learn-how-to-care-for-bag-of-flour/">The Onion: Chef Baby</a>
+
+<br>
+<br>
 
 
-Ta-da! Are you impressed? Probably not, do not answer that.
 ```{r}
-
 springcleaning2.0()
+```
+
+## Assignment 4
+1) Use Quanteda and base R for this assignment
+2)Submit as HTML (link or file) using your own css styled output
+3) Style it like a real report describing what you are doing at each step and why
+4) Read in unabomber from my github repo
+5) Output its structure
+
+The unabomber text is analyzed. Here, the text is named "messy_txt"
+```{r}
+#Unabomber text is read in
+messy_txt <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt'))
 
 ```
 
-I luv the Onion (sometimes), anyways that is a wrap folks!
+
+A new cleaning genie for quanteda is made to output a text rather than a data frame
+```{r}
+
+raw_txt <- readLines(
+  "https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt"
+)
+
+unabomb_quanteda <- function() { 
+  
+  #Loading in r data stopwords for cleaning
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+  
+  # Standardizes font punctuation not recognized by code to be used in the function
+  utf8_normalize <- function(x) {
+    stringi::stri_enc_toutf8(as.character(x), is_unknown_8bit = FALSE, validate = TRUE)
+  }
+  
+  # Replacing apostrophes and quotes
+  unabomb_quanteda_unr.apos <- stringr::str_replace_all(
+    utf8_normalize(x = raw_txt), 
+    "[\u201c\u201d\u0022\u2033\u02dd\u201f\u201e]", " "
+  )
+
+  #Applies lowercase to all the text
+  unabomb_quanteda_lower <- tolower(unabomb_quanteda_unr.apos)
+  
+  #Removing digits and spaces
+  unabomb_quanteda_digits <- gsub("[[:digit:]]", " ", unabomb_quanteda_lower)
+  unabomb_quanteda_space <- gsub("[[:space:]]", " ", unabomb_quanteda_digits)
+
+  #Replacing contractions with the appropriate expansion  
+  unabomb_quanteda_contractions <- stringr::str_replace_all(unabomb_quanteda_space, 
+    setNames(replacements_25$replacement, nm = replacements_25$word))
+ 
+  #Converting the stopwords columns from each data frame into appropriate form to be able to remove stop words
+  sw <- unique(c(MIT_stops$word, SMART_stops$word))
+  sw <- sw[nzchar(sw)]
+  sw <- gsub("([][{}()+*^$|\\\\?.])", "\\\\\\1", sw)
+
+  unabomb_quanteda_nostops <- gsub(
+    paste0("\\b(", paste(sw, collapse = "|"), ")\\b"),
+    "",
+    unabomb_quanteda_contractions,
+    perl = TRUE
+  )
+
+  # Removes punctuation except periods by replacing punctuation with spaces
+  unabomb_quanteda_punct <- gsub("(?!\\.)[[:punct:]]", " ", unabomb_quanteda_nostops, perl = TRUE)
+  #Replaces any and all whitespace into a single space
+  unabomb_quanteda_final <- gsub("[[:space:]]+", " ", unabomb_quanteda_punct)
+  
+  #Cleans up any remaining spaces as a result of removal of punctuation
+  unabomb_quanteda_final <- gsub("^ | $", "", unabomb_quanteda_final)
+
+  return(unabomb_quanteda_final) 
+}
+
+```
+
+
+The cleaned text is transformed into a corpus and a summary is generated.
+```{r}
+#Loading in the quanteda  library
+library(quanteda)
+
+#Assigning the unabomb_quanteda function into an object
+clean_txt <- unabomb_quanteda()
+
+#The data is converted to a corpus for further analysis 
+my_simple_corpus <- corpus(clean_txt)
+
+#The corpus is tokenized, removing numbers, punctuation, and separating space
+clean_tokenized <- tokens(
+  my_simple_corpus,
+  remove_numbers = TRUE,
+  remove_punct = TRUE,
+  remove_separators = TRUE
+)
+
+#Showing data for the corpus 
+summary(my_simple_corpus)
+
+```
+
+
+A table of lexical characteristics is generated
+```{r}
+#Creating a tokenized version of the corpus tokens_unabomb, removing punctuation and stopwords
+tokens_unabomb <- tokens(clean_txt, remove_punct = TRUE) %>% tokens_remove(stopwords("SMART"))
+
+#Creating a document-feature matrix, stemming is applied
+md_dfm_unabomb <- dfm(tokens_unabomb, dfm_stem = TRUE)
+topfeatures(md_dfm_unabomb, 15)
+```
+
+
+A lexical dispersion plot highlighting five words is generated
+```{r}
+#Loading in the quanteda textplots library
+library("quanteda.textplots")
+
+#Text is collapsed for the textplot_xray to work
+clean_txt_2 <- paste(clean_txt, collapse = " ")
+names(clean_txt_2) <- "Unabomber"
+
+#Determining where the following words appear in the text in time
+textplot_xray(
+  kwic(tokens(clean_txt_2), pattern = "society"),
+  kwic(tokens(clean_txt_2), pattern = "kill"),
+  kwic(tokens(clean_txt_2), pattern = "leftist"),
+  kwic(tokens(clean_txt_2), pattern = "bomb"),
+  kwic(tokens(clean_txt_2), pattern = "cleanse"),
+  scale = "absolute"
+)
+
+```
+<br>
+<br>
+
+A Wordcloud Print DFM is generared consisting of the top 20 words
+```{r}
+#This word cloud prints a visual representation of the most common words represented by size
+quanteda.textplots::textplot_wordcloud(md_dfm_unabomb, random_order = FALSE, rotation = 0.25) 
+
+#Printing out the top twenty most common words in the text
+topfeatures(md_dfm_unabomb, 20)
+
+```
+<br>
+<br>
+
+## Assignment 5
+
+Modify unambomber so you apply pro template (Done)
+  
+Improve your cleaning genie so you’re happy rename the genie first name_genie
+```{r}
+tanaka_genie <- function(text) { 
+  
+#Loading in stop words from SMART and MIT 
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+
+  #Collapses the string into one text
+  clean_corpus <- paste(text, collapse = " ")
+
+  #Standardizes font punctuation not recognized by code to be used in the function
+  utf8_normalize <- function(x) {
+  stringi::stri_enc_toutf8(as.character(x), is_unknown_8bit = TRUE, validate = TRUE)
+}
+    
+  #Removing unrecognized apostrophes and quotation marks by simpler code
+  clean_corpus_apos <- str_replace_all(utf8_normalize(x=clean_corpus),"[\u201c\u201d\u0022\u2033\u02dd\u201f\u201e]", " ")
+
+  #Utilizes lowercase text for all words 
+  cl_co_low <- tolower(clean_corpus_apos)
+  
+  #Removes digits from the text
+  cl_co_di <- gsub("[[:digit:]]"," ",cl_co_low)
+    
+  #Replaces all spaces with a singular space; preparing for splitting and unlisting
+  cl_co_sp <- gsub("[[:space:]]"," ", cl_co_di)
+    
+   #Removing contractions
+  cl_co_contractions <- str_replace_all(cl_co_sp, setNames(replacements_25$replacement, nm = replacements_25$word))
+ 
+  #Removing punctuation
+  cl_co_punct <- gsub("[[:punct:]]"," ", cl_co_contractions)
+
+  #Splits the words by space
+  cl_co_spl = strsplit(cl_co_punct, " ")
+    
+  #Unlisting the texts in the corpus
+  cl_co_unl <- unlist(cl_co_spl)
+    
+  #Creating a data frame
+  df_cleancorpus <- data.frame(Words = cl_co_unl)
+    
+  #Removing stop words
+ df_cleancorpus$Words_No_Stop <- ifelse(
+  df_cleancorpus$Words %in% c(MIT_stops$word,SMART_stops$word),
+  NA_character_,
+  df_cleancorpus$Words
+  )
+  
+ 
+#### ---- The following options allow for selections of data frames you wish to view
+  #Replacing empty spaces with NA (View data frame with two columns: 
+  #one with no stopwords removed and another with NAs removed)
+  df_cleancorpus$Words_No_Stop[df_cleancorpus$Words_No_Stop == ""] <- NA
+ 
+  #Creating separate data frame with clean words (Contains NAs)
+  df_final_NAs <- as.data.frame(dplyr::select(df_cleancorpus, Words_No_Stop))
+
+  #Creating separate data frame with no NAs
+  df_final_noNAs <- subset(df_final_NAs, !is.na(Words_No_Stop))
+  colnames(df_final_noNAs)[1] <- "Words"
+  
+  #Returning a new data frame!
+    return(df_final_noNAs) 
+}
+```
+  
+  
+Summarize your corpus with new cleaning data
+```{r}
+#Importing the unabomber text
+unabomb <- paste(readLines('https://raw.githubusercontent.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/main/unabomber_manifesto.txt'))
+
+mycleandat <- tanaka_genie(text=unabomb)
+print(mycleandat)
+
+#Loading in the quanteda  library
+library(quanteda)
+
+#The data is converted to a corpus for further analysis 
+my_simple_corpus <- corpus(mycleandat$Words)
+
+#The corpus is tokenized, removing numbers, punctuation, and separating space
+clean_tokenized <- tokens(
+  my_simple_corpus,
+  remove_numbers = TRUE,
+  remove_punct = TRUE,
+  remove_separators = TRUE
+)
+
+#Showing data for the corpus 
+summary(my_simple_corpus)
+
+```
+ 
+  
+  Write out your hypothesis about unabomber
+```{r}
+# Hypothesis
+#   The Unabomber texts will be high in anger, intensity, and low in happiness and trust
+#   or another way to express this
+#   The Unabomber will express and write in a tone to convey paranoia and fear
+```
+  
+  
+Run your four variables
+```{r}
+# load .rda from GitHub raw URL
+load(url("https://github.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/blob/main/lookup_Jul25.rda?raw=true"))
+
+lookup_db <- lookup_Jul25
+colnames(lookup_db)
+str(lookup_db)
+
+# keep join key `word` + columns you want
+lookup_small <- lookup_db %>%
+  dplyr::select(word, emo_trust, emo_intensity, emo_anxiety, emo_anger)
+str(lookup_small)
+
+# join with your text data frame (replace `mycleandat` if your object name differs)
+df_prep <- mycleandat %>%
+  dplyr::left_join(lookup_small, by = c("Words" = "word"))
+
+print(df_prep)
+
+```
+
+
+Visualize results
+```{r}
+#The data is put into a data frame ready for plotting
+df_summary <- df_prep %>%
+  summarise(
+    emo_trust = mean(emo_trust, na.rm = TRUE),
+    emo_intensity = mean(emo_intensity, na.rm = TRUE),
+    emo_anxiety = mean(emo_anxiety, na.rm = TRUE),
+    emo_anger = mean(emo_anger, na.rm = TRUE)
+  ) %>%
+  pivot_longer(everything(), names_to = "emotion", values_to = "score")
+
+#The plot depicting the variables
+ggplot(df_summary, aes(x = reorder(emotion, score), y = score, fill = emotion)) +
+  geom_col(width = 0.7) +
+  coord_flip() +
+  labs(title = "Average Emotion Scores in Clean Text", x = NULL, y = "Mean score") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+```
+
+  
+Describe the results in human words
+```{r}
+
+# While the unabomber uses intense words, the text is not reflective of him being anxious, angry; however, it does appear that he is not trusting of others.
+
+```
+
+
+## Assignment 6
+
+1) State a hypothesis about the gaslighting dataset
+
+```{r}
+
+# For those who have never been gaslit, reported definitions of gaslighting are low in intensity
+
+```
+
+
+2) Develop your processing pipeline and justify steps, etc. 
+
+```{r}
+
+#Loading in lookup database
+load(url("https://github.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/blob/main/lookup_Jul25.rda?raw=true"))
+lookup_db <- lookup_Jul25
+colnames(lookup_db)
+str(lookup_db)
+
+#Loading in gaslight corpus
+load(url("https://github.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/blob/main/gaslight.rda?raw=true"))
+
+str(gaslight)
+
+#Variables are turned into factors to allow for easier data manipulation
+gaslight$Gender <- as.factor(gaslight$Gender)
+gaslight$ID <-  as.factor(gaslight$ID)
+gaslight$Ever_Gaslit <- as.factor(gaslight$Ever_Gaslit)
+
+#Selecting for gaslight definition
+gaslight_definition <- gaslight %>% select(Ever_Gaslit, gd_adult_definition)
+
+#The data is converted to a corpus for further analysis 
+my_simple_corpus_gaslight <- corpus(
+  gaslight_definition,
+  text_field = "gd_adult_definition",
+  docvars = gaslight_definition["Ever_Gaslit"]
+)
+
+#The corpus is tokenized, removing numbers, punctuation, and separating space
+clean_tokenized <- tokens(
+  my_simple_corpus_gaslight,
+  remove_numbers = TRUE,
+  remove_punct = TRUE,
+  remove_separators = TRUE
+)
 
 
 
-<!-- # Code Snippets -->
+#Showing data for the corpus 
+summary(my_simple_corpus_gaslight)
 
-<!-- Here is a bank of code snippets to help you (more so me) with your coding! -->
-<!-- <br> -->
-<!-- <br> -->
 
-<!-- ## Code Snippet 1 -->
-<!-- ```{r} -->
 
-<!-- ``` -->
+```
+
+3) Analyze your data, report relevant statistics and visualization(s)
+
+```{r}
+# load .rda from GitHub raw URL
+load(url("https://github.com/Reilly-ConceptsCognitionLab/reillylab_publicdata/blob/main/lookup_Jul25.rda?raw=true"))
+
+lookup_db <- lookup_Jul25
+colnames(lookup_db)
+str(lookup_db)
+
+# keep join key `word` + columns you want
+lookup_small <- lookup_db %>%
+  dplyr::select(word, emo_intensity)
+str(lookup_small)
+
+#Convert to data frame
+df_my_simple_corpus_gaslight <- data.frame(
+  text_id = quanteda::docnames(my_simple_corpus_gaslight),
+  gaslight_definition = as.character(my_simple_corpus_gaslight),
+  Ever_Gaslit = quanteda::docvars(my_simple_corpus_gaslight, "Ever_Gaslit"),
+  stringsAsFactors = FALSE
+)
+colnames(df_my_simple_corpus_gaslight)[1] <- "gaslight_definition"
+
+#Makes words unique for the next necessary code
+names(df_my_simple_corpus_gaslight) <- make.unique(names(df_my_simple_corpus_gaslight))
+
+#Split words of each definition but retain the text_id
+ df_words <- df_my_simple_corpus_gaslight %>%
+  mutate(text_id = if ("text_id" %in% names(.)) text_id else rownames(.)) %>%
+  select(text_id, Ever_Gaslit, gaslight_definition.1) %>%
+  separate_rows(gaslight_definition.1, sep = "\\s+") %>%
+  rename(word = gaslight_definition.1) %>%
+  mutate(word = tolower(word))
+
+
+df_prep <- df_words %>%
+  dplyr::left_join(lookup_small, by = c("word" = "word"))
+
+print(df_prep)
+
+#Summarize the data for emotional intensity
+df_summary_by_text <- df_prep %>%
+  group_by(text_id, Ever_Gaslit) %>%
+  summarise(
+    mean_emo_intensity = mean(emo_intensity, na.rm = TRUE),
+    n_matched = sum(!is.na(emo_intensity)),
+    .groups = "drop"
+  )
+
+#Rearranging the text to order the text_id
+df_summary_by_text <- df_summary_by_text[order(as.numeric(sub("text", "", df_summary_by_text$text_id))), ]
+
+
+#Visualizing results
+
+  #The data is put into a data frame ready for plotting
+     df_summary <- df_summary_by_text %>%
+        group_by(Ever_Gaslit) %>%
+        summarise(
+        emo_intensity = mean(mean_emo_intensity, na.rm = TRUE),
+        .groups = "drop"
+      )
+
+  
+  #The plot depicting the variable
+  ggplot(df_summary, aes(x = Ever_Gaslit, y = emo_intensity, fill = Ever_Gaslit)) +
+  geom_col(width = 0.7) +
+  labs(
+    title = "Average Emotional Intensity by Gaslighting Experience",
+    x = "Ever Gaslit",
+    y = "Mean Intensity"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+
+
+
+```
+
+
+4) State your conclusions
+```{r}
+
+#Based on purely visible observation, those who have never been gaslit give a definition #higher in intensity
+
+```
+
+
+
+
+
+# Cleaning Genie Repository
+
+## General Cleaning Genie
+```{r}
+
+tanaka_genie <- function(z) { 
+  
+#Loading in stop words from SMART and MIT 
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  
+load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+
+  #Collapses the string into one text
+  clean_corpus <- paste(z, collapse = " ")
+
+  #Standardizes font punctuation not recognized by code to be used in the function
+  utf8_normalize <- function(x) {
+  stringi::stri_enc_toutf8(as.character(x), is_unknown_8bit = TRUE, validate = TRUE)
+}
+    
+  #Removing unrecognized apostrophes and quotation marks by simpler code
+  clean_corpus_apos <- str_replace_all(utf8_normalize(x=clean_corpus),"[\u201c\u201d\u0022\u2033\u02dd\u201f\u201e]", " ")
+
+  #Utilizes lowercase text for all words 
+  cl_co_low <- tolower(clean_corpus_apos)
+  
+  #Removes digits from the text
+  cl_co_di <- gsub("[[:digit:]]"," ",cl_co_low)
+    
+  #Replaces all spaces with a singular space; preparing for splitting and unlisting
+  cl_co_sp <- gsub("[[:space:]]"," ", cl_co_di)
+    
+   #Removing contractions
+  cl_co_contractions <- str_replace_all(cl_co_sp, setNames(replacements_25$replacement, nm = replacements_25$word))
+ 
+  #Removing punctuation
+  cl_co_punct <- gsub("[[:punct:]]"," ", cl_co_contractions)
+
+  #Splits the words by space
+  cl_co_spl = strsplit(cl_co_punct, " ")
+    
+  #Unlisting the texts in the corpus
+  cl_co_unl <- unlist(cl_co_spl)
+    
+  #Creating a data frame
+  df_cleancorpus <- data.frame(Words = cl_co_unl)
+    
+  #Removing stop words
+ df_cleancorpus$Words_No_Stop <- ifelse(
+  df_cleancorpus$Words %in% c(MIT_stops$word,SMART_stops$word),
+  NA_character_,
+  df_cleancorpus$Words
+  )
+  
+ 
+#### ---- The following options allow for selections of data frames you wish to view
+  #Replacing empty spaces with NA (View data frame with two columns: 
+  #one with no stopwords removed and another with NAs removed)
+  df_cleancorpus$Words_No_Stop[df_cleancorpus$Words_No_Stop == ""] <- NA
+ 
+  #Creating separate data frame with clean words (Contains NAs)
+  df_final_NAs <- as.data.frame(dplyr::select(df_cleancorpus, Words_No_Stop))
+
+  #Creating separate data frame with no NAs
+  df_final_noNAs <- subset(df_final_NAs, !is.na(Words_No_Stop))
+  colnames(df_final_noNAs)[1] <- "Words"
+  
+  #Returning a new data frame!
+    return(df_final_noNAs) 
+}
+```
+
+
+## Quanteda Cleaning Genie
+```{r}
+unabomb_quanteda <- function(z) { 
+  
+  #Loading in r data stopwords for cleaning
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+  
+  # Standardizes font punctuation not recognized by code to be used in the function
+  utf8_normalize <- function(x) {
+    stringi::stri_enc_toutf8(as.character(x), is_unknown_8bit = FALSE, validate = TRUE)
+  }
+  
+  # Replacing apostrophes and quotes
+  unabomb_quanteda_unr.apos <- stringr::str_replace_all(
+    utf8_normalize(x = z), 
+    "[\u201c\u201d\u0022\u2033\u02dd\u201f\u201e]", " "
+  )
+
+  #Applies lowercase to all the text
+  unabomb_quanteda_lower <- tolower(unabomb_quanteda_unr.apos)
+  
+  #Removing digits and spaces
+  unabomb_quanteda_digits <- gsub("[[:digit:]]", " ", unabomb_quanteda_lower)
+  unabomb_quanteda_space <- gsub("[[:space:]]", " ", unabomb_quanteda_digits)
+
+  #Replacing contractions with the appropriate expansion  
+  unabomb_quanteda_contractions <- stringr::str_replace_all(unabomb_quanteda_space, 
+    setNames(replacements_25$replacement, nm = replacements_25$word))
+ 
+  #Converting the stopwords columns from each data frame into appropriate form to be able to remove stop words
+  sw <- unique(c(MIT_stops$word, SMART_stops$word))
+  sw <- sw[nzchar(sw)]
+  sw <- gsub("([][{}()+*^$|\\\\?.])", "\\\\\\1", sw)
+
+  unabomb_quanteda_nostops <- gsub(
+    paste0("\\b(", paste(sw, collapse = "|"), ")\\b"),
+    "",
+    unabomb_quanteda_contractions,
+    perl = TRUE
+  )
+
+  # Removes punctuation except periods by replacing punctuation with spaces
+  unabomb_quanteda_punct <- gsub("(?!\\.)[[:punct:]]", " ", unabomb_quanteda_nostops, perl = TRUE)
+  #Replaces any and all whitespace into a single space
+  unabomb_quanteda_final <- gsub("[[:space:]]+", " ", unabomb_quanteda_punct)
+  
+  #Cleans up any remaining spaces as a result of removal of punctuation
+  unabomb_quanteda_final <- gsub("^ | $", "", unabomb_quanteda_final)
+
+  return(unabomb_quanteda_final) 
+}
+```
+
+
+## Gaslight Cleaning Genie
+```{r}
+
+gaslight_genie <- function(raw_txt) { 
+  
+  #Loading in r data stopwords for cleaning
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/SMART_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/MIT_stops.rda')
+  load('/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/Week3_nlp/data/replacements_25.rda')
+  
+  # Standardizes font punctuation not recognized by code to be used in the function
+  utf8_normalize <- function(x) {
+    stringi::stri_enc_toutf8(as.character(x), is_unknown_8bit = FALSE, validate = TRUE)
+  }
+  
+  # Replacing apostrophes and quotes
+  gaslight_unr.apos <- stringr::str_replace_all(
+    utf8_normalize(x = raw_txt), 
+    "[\u201c\u201d\u0022\u2033\u02dd\u201f\u201e]", " "
+  )
+
+  #Applies lowercase to all the text
+  gaslight_lower <- tolower(gaslight_unr.apos)
+  
+  #Removing digits and spaces
+  gaslight_digits <- gsub("[[:digit:]]", " ", gaslight_lower)
+  gaslight_space <- gsub("[[:space:]]", " ", gaslight_digits)
+
+  #Replacing contractions with the appropriate expansion  
+  gaslight_contractions <- stringr::str_replace_all(gaslight_space, 
+    setNames(replacements_25$replacement, nm = replacements_25$word))
+ 
+  #Converting the stopwords columns from each data frame into appropriate form to be able to remove stop words
+  sw <- unique(c(MIT_stops$word, SMART_stops$word))
+  sw <- sw[nzchar(sw)]
+  sw <- gsub("([][{}()+*^$|\\\\?.])", "\\\\\\1", sw)
+
+  gaslight_nostops <- gsub(
+    paste0("\\b(", paste(sw, collapse = "|"), ")\\b"),
+    "",
+    gaslight_contractions,
+    perl = TRUE
+  )
+
+  # Removes punctuation except periods by replacing punctuation with spaces
+  gaslight_punct <- gsub("[[:punct:]]", " ", gaslight_nostops, perl = TRUE)
+  #Replaces any and all whitespace into a single space
+  gaslight_final <- gsub("[[:space:]]+", " ", gaslight_punct)
+  
+  #Cleans up any remaining spaces as a result of removal of punctuation
+  gaslight_final <- gsub("^ | $", "", gaslight_final)
+
+  return(gaslight_final) 
+}
+
+```
 

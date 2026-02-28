@@ -8,7 +8,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 2
-    css: !expr here::here("/Users/tanakamanhede/Documents/GitHub/project_nlpcourse26/Manhede_RData/styles_templates/jr_19.css")
+    css: !expr here::here("/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/styles_templates/jr_19.css")
 ---
 
 ```{r setup, include=F}
@@ -106,56 +106,23 @@ splitstring = str_split(gonestring, " ")
 
 ```
 
-## Make a corpus!
+# More code snippets to come...
 
-6.
+
+6. I had no idea I could add breaks into the code!
 ```{r}
-#my_simple_corpus  <- corpus(dat, docid_field = "author", text_field = "doc_text")  
-
+<br><br>
 ```
 
 
-## A function for replacing words!
-7.
+7. how to load in a corpus!
 ```{r}
-# Function to replace a word in a target data frame with a replacement word
-replace_words <- function(text_vector, replacement_df) {
- # Replace each bad word with its corresponding good word
- for (i in seq_len(nrow(replacement_df))) {
-   text_vector <- gsub(
-     pattern = replacement_df$mybad[i],
-     replacement = replacement_df$mygood[i],
-     x = text_vector,
-     ignore.case = TRUE
-   )
- }
- return(text_vector)
-}
+my_simple_corpus  <- corpus(dat, docid_field = "author", text_field = "doc_text")
 ```
 
-
-## I can add breaks now!
 8. 
 ```{r}
 
-#<br> 
-#  <br>
-  
 ```
 
-
-## Saving a file
-9.  
-```{r}
-#save(mysample, file='/Users/tanakamanhede/Library/CloudStorage/OneDrive-TempleUniversity/Manhede_RData/Week2_nlp/archive/mysample.rda')
-```
-
-
-## Leaves only letters and removes numbers and punctuation 
-10.
-```{r}
-
-x <- gsub("[^A-Za-z ]","",x) 
-
-```
 

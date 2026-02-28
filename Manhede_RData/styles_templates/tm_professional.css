@@ -1,0 +1,168 @@
+/* Professional polish while keeping your original style direction */
+:root {
+  --bg: #f7f8fa;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  --title-bg: #0f4c5c;
+  --h1-bg: #1f3a5f;
+  --h2-bg: #3b5b8a;
+  --h3-bg: #5f7ea6;
+
+  --link: #0b63ce;
+  --link-visited: #5b3aa8;
+  --link-hover-bg: #e8f0fb;
+
+  --toc-border: #d6deea;
+  --toc-active-bg: #eaf2ff;
+  --toc-active-text: #1f3a5f;
+
+  --code-bg: #eef3f8;
+  --card-bg: #ffffff;
+
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-heading: "Merriweather", Georgia, serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 13pt;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Content area */
+.toc-content {
+  margin-left: -15px;
+  padding-left: 0;
+}
+
+/* Headers */
+h1.title {
+  color: #fff;
+  font-size: 16pt;
+  background-color: var(--title-bg);
+  padding: 0.95em 0.35em 0.3em 0.6em;
+  text-align: left;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 15px;
+  padding: 0.35em 0.5em 0.3em 0.55em;
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: 15pt;
+  color: #fff;
+  background-color: var(--h1-bg);
+}
+
+h2 {
+  font-size: 15pt;
+  color: #fff;
+  background-color: var(--h2-bg);
+}
+
+h3 {
+  font-size: 15pt;
+  color: #fff;
+  background-color: var(--h3-bg);
+}
+
+/* Main body blocks */
+p, li {
+  color: #1f2328;
+}
+
+/* Code chunks */
+pre {
+  max-height: 350px;
+  background-color: var(--code-bg);
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid rgba(18, 64, 26, 0.12);
+}
+
+pre[class] { max-height: 350px; }
+.r code { white-space: pre; }
+pre code { white-space: pre-wrap; }
+
+/* Links */
+a:link {
+  color: var(--link);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--link-visited);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-visited);
+  background-color: var(--link-hover-bg);
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+/* TOC logo */
+#TOC::before {
+  content: "";
+  display: block;
+  height: 350px;
+  width: 200px;
+  margin: 20px auto 12px auto;
+  /*background-image: url("WorkingHard.png");*/
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* TOC container */
+div#TOC {
+  font-size: 10pt;
+  background: var(--card-bg);
+  border: 1px solid var(--toc-border);
+  border-radius: 8px;
+  padding: 6px 4px;
+  width: 15%;
+  max-width: 15%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Active TOC item */
+.list-group-item.active,
+.list-group-item.active:hover {
+  z-index: 2;
+  color: var(--toc-active-text);
+  text-decoration: none;
+  background-color: var(--toc-active-bg);
+  border-color: var(--toc-active-bg);
+  font-weight: 700;
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+  div#TOC {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 14px;
+  }
+  .toc-content {
+    margin-left: 0;
+  }
+}
